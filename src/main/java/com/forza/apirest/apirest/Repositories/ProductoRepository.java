@@ -7,3 +7,4 @@ import com.forza.apirest.apirest.Entities.Producto;
 public interface ProductoRepository extends JpaRepository< Producto, Long>{
 
 }
+

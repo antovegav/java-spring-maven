@@ -6,7 +6,7 @@ $(document).ready.(function(){
 
 async function mostrarUsuarios(){
     const request = await fetch('usuarios',{
-        method 'POST'
+        method 'POST',
         headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'

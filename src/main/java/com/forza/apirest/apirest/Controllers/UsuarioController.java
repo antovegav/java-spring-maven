@@ -29,11 +29,13 @@ public class UsuarioController {
         return usuario;
     }
 
+
     public Usuario deleteUsuario(){
 
         Usuario usuario = new Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
         return usuario;
     }
+
 
     @RequestMapping(value = "usuario/{id}")
     public Usuario getByIdUsuario(@PathVariable Long id){
@@ -41,4 +43,5 @@ public class UsuarioController {
         Usuario usuario = new Usuario(id,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
         return usuario;
     }
+    
 }

@@ -22,7 +22,6 @@ public class Usuario {
 
 
 
-
     // GETTERS Y SETTERS
     public Long getId() {
         return id;
