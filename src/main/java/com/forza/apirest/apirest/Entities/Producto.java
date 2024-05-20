@@ -16,24 +16,7 @@ public class Producto {
     private double precio;
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+//    GETTERS & SETTERS 
     public Long getId() {
         return id;
     }
