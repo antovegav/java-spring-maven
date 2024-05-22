@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 async function mostrarProductos(){
-    const request = await fetch('prductos',{
+    const request = await fetch('/prductos',{
         method 'GET',
         headers:{
             'Accept': 'application/json',

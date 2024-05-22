@@ -44,6 +44,20 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
 
+    @RequestMapping("usuario/{id}")
+    public List<Usuario> getUsuarios(){
+        List<Usuario> usuarios = new ArrayList<>();
+
+        Usuario usuario1 = new Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Viña", "1 Norte #024");
+        Usuario usuario2 = new Usuario(2L,"Tester", "test@2.2", "test2", "+5691", "Valparaiso de", "Baron #586");
+        Usuario usuario3 = new Usuario(3L,"Tester", "test@3.3", "test3", "+5691", "Tokyo", "Hokkaido #375");
+
+        usuarios.add(usuario1);
+        usuarios.add(usuario2);
+        usuarios.add(usuario3);
+        return usuarios;
+    }
+
 //    @Autowired
 //    private UsuarioRepository usuarioRepository;
 //
@@ -51,9 +65,9 @@ public class UsuarioController {
 //    public List<Producto.Usuario> getUsuarios(){
 //        List<Producto.Usuario> usuarios = new ArrayList<>();
 //
-//        Producto.Usuario usuario1 = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
-//        Producto.Usuario usuario2 = new Producto.Usuario(2L,"Tester", "test@2.2", "test2", "+5691", "Dentro de", "tu corazon bb 💝");
-//        Producto.Usuario usuario3 = new Producto.Usuario(3L,"Tester", "test@3.3", "test3", "+5691", "Dentro de", "tu corazon bb 💝");
+//        Producto.Usuario usuario1 = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Viña", "1 Norte #024");
+//        Producto.Usuario usuario2 = new Producto.Usuario(2L,"Tester", "test@2.2", "test2", "+5691", "Valparaiso de", "Baron #586");
+//        Producto.Usuario usuario3 = new Producto.Usuario(3L,"Tester", "test@3.3", "test3", "+5691", "Tokyo", "Hokkaido #375");
 //
 //        usuarios.add(usuario1);
 //        usuarios.add(usuario2);
@@ -64,7 +78,7 @@ public class UsuarioController {
 //    @RequestMapping
 //    public Producto.Usuario updateUsuario(){
 //
-//        Producto.Usuario usuario = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
+//        Producto.Usuario usuario = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Viña", "1 Norte #024");
 //        return usuario;
 //    }
 //
@@ -72,7 +86,7 @@ public class UsuarioController {
 //    @RequestMapping
 //    public Producto.Usuario deleteUsuario(){
 //
-//        Producto.Usuario usuario = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
+//        Producto.Usuario usuario = new Producto.Usuario(1L,"Test", "test@1.1", "test1", "+5691", "Viña", "1 Norte #024");
 //        return usuario;
 //    }
 //
@@ -80,7 +94,7 @@ public class UsuarioController {
 //    @RequestMapping(value = "usuario/{id}")
 //    public Producto.Usuario getByIdUsuario(@PathVariable Long id){
 //
-//        Producto.Usuario usuario = new Producto.Usuario(id,"Test", "test@1.1", "test1", "+5691", "Dentro de", "tu corazon bb 💝");
+//        Producto.Usuario usuario = new Producto.Usuario(id,"Test", "test@1.1", "test1", "+5691", "Viña", "1 Norte #024");
 //        return usuario;
 //    }
 //

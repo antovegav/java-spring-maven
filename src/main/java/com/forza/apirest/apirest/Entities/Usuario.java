@@ -25,17 +25,18 @@ public class Usuario {
     private String ciudad;
     private String password;
 
-//    public Usuario(Long id, String nombre, String email, String password, String telefono, String direccion, String ciudad){
-//
-//        this.nombre = nombre;
-//        this.email = email;
-//        this.password = password;
-//        this.telefono = telefono;
-//        this.direccion = direccion;
-//        this.ciudad = ciudad;
-//    }
-//
-//
+    public Usuario(Long id, String nombre, String email, String password, String telefono, String direccion, String ciudad){
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+    }
+
+    public Usuario(){}
+
 
     // GETTERS Y SETTERS
     public Long getId() {
