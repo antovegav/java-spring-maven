@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -50,7 +50,7 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Carro
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cuenta-carrito">0</span>
                         </button>
                     </form>
                     <div class="dropdown">
@@ -78,14 +78,14 @@
         <section class="py-5 bg-warning">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="productos">
-                    <div class="col mb-5">
+                    <div class="col mb-5" th:each="producto : ${productos}">
                         <a href="producto.html" class="card-link">
                             <div class="card h-100">
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <div class="card-body p-4">
                                     <div class="text-center">
-                                        <h5 class="fw-bolder">Fancy Product</h5>
-                                        $40.00 - $80.00
+                                        <h5 class="fw-bolder" th:text="${producto.nombre}"></h5>
+                                        <div th:text="${producto.precio}"></div>
                                     </div>
                                 </div>
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">

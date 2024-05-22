@@ -9,6 +9,6 @@ services:
       POSTGRES_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       POSTGRES_DB: ${SPRING_DATASOURCE_DB}
     ports:
-      - "5432:5432"
+      - "3606:3606"
     volumes:
       - ./postgres:/var/lib/postgres/data
