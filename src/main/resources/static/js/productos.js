@@ -1,4 +1,4 @@
-$(document).ready.(function(){
+$(document).ready(function(){
     mostrarProductos();
 
     $('#productos').DataTable();
@@ -6,7 +6,7 @@ $(document).ready.(function(){
 
 async function mostrarProductos(){
     const request = await fetch('prductos',{
-        method 'POST',
+        method 'GET',
         headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'

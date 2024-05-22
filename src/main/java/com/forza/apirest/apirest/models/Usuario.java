@@ -1,8 +1,20 @@
 package com.forza.apirest.apirest.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@Entity
+@Table(name = "usuarios")
+@ToString @EqualsAndHashCode
 public class Usuario {
 // Atributos
+
+    @Id
     private  Long id;
+
     private String nombre;
     private String email;
     private String telefono;
