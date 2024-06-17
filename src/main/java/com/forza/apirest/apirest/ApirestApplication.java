@@ -20,7 +20,7 @@ public class ApirestApplication {
 		try {
 			// Conexión a la base de datos
 			Connection connection = DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:3306/login_schema", // URL de la base de datos corregida
+					"jdbc:mysql://127.0.0.1:3306/apirest", // URL de la base de datos corregida
 					"root", // Usuario de la base de datos
 					"password" // Contraseña de la base de datos
 			);

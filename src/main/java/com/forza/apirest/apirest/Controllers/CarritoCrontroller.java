@@ -8,16 +8,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @RestController
 @RequestMapping
 public class CarritoCrontroller {
 
     @Autowired
     private CarritoService carritoService;
+    private String nombre, email;
 
-    @GetMapping("/{usuarioID}")
+    @GetMapping("/{usuarioId}")
     public List<Carrito> obtenerCarritoPorUsuario(@PathVariable Long usuarioId){
-        Usuario usuario = new Usuario();
+        Usuario usuario = new Usuario(id,nombre,email);
         usuario.setId(usuarioId);
         return carritoService.obtenerCarritoPorUsuario(usuario);
     }

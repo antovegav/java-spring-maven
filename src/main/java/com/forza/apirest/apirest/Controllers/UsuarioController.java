@@ -44,7 +44,7 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
 
-    @RequestMapping("usuario/{id}")
+/*    @RequestMapping("usuario/{id}")
     public List<Usuario> getUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
 
@@ -57,7 +57,7 @@ public class UsuarioController {
         usuarios.add(usuario3);
         return usuarios;
     }
-
+*/
 //    @Autowired
 //    private UsuarioRepository usuarioRepository;
 //

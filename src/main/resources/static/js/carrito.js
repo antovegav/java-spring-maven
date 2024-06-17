@@ -1,6 +1,6 @@
 const productos = [
-            { id: 1, nombre: 'Martillo', precio: 25, descripcion: 'Un martillo resistente.', stock: 10 },
-            { id: 2, nombre: 'Destornillador', precio: 15, descripcion: 'Un destornillador multiusos.', stock: 20 }
+            { id: L1, nombre: 'Martillo', precio: 25, descripcion: 'Un martillo resistente.', stock: 10 },
+            { id: L2, nombre: 'Destornillador', precio: 15, descripcion: 'Un destornillador multiusos.', stock: 20 }
         ];
 
         const carrito = [];

@@ -4,14 +4,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.*;
+import jakarta.persistence.metamodel.SingularAttribute;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+import java.io.Serializable;
 
 //@ToString @EqualsAndHashCode
 //@Table(name = "usuarios")
 @Entity
 @Data
+@Table(name="usuarios")
 public class Usuario {
 // Atributos
 
@@ -35,7 +38,10 @@ public class Usuario {
         this.ciudad = ciudad;
     }
 
-    public Usuario(){}
+    public Usuario(Long id, String nombre, String email){}
+
+    public Usuario(SingularAttribute<AbstractPersistable, Serializable> id, String nombre, String email) {
+    }
 
 
     // GETTERS Y SETTERS
